@@ -1,9 +1,17 @@
-variable "org_id" {
-  description = "ID of organization"
+variable "billing_account_id" {
+  description = "The ID of the billing account to associate projects with"
   type        = string
 }
 
-variable "folder_name" {
-  description = "Display name of folder"
+variable "folder_id" {
+  description = "The ID of the parent folder"
   type        = string
+}
+
+variable "project_name" {
+  type = string
+}
+
+variable "project_id" {
+  type = string
 }

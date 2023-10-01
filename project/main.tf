@@ -1,3 +1,6 @@
+locals {
+  project_id = var.project_id == "" ? var.project_name : (use_random_suffix ? "${var.project_id}-${random_id.random_suffix.hex}" : var.project_id)
+}
 resource "google_project" "project" {
   name                = var.project_name
   project_id          = "${var.project_id}-${random_id.random_suffix.hex}"

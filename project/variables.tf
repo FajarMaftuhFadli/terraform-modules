@@ -13,5 +13,11 @@ variable "project_name" {
 }
 
 variable "project_id" {
-  type = string
+  type    = string
+  default = ""
+}
+
+variable "use_random_suffix" {
+  type    = bool
+  default = false
 }

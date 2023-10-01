@@ -1,10 +1,7 @@
-locals {
-  project_id = var.project_id == "" ? var.project_name : (use_random_suffix ? "${var.project_id}-${random_id.random_suffix.hex}" : var.project_id)
-}
 resource "google_project" "project" {
   name                = var.project_name
-  project_id          = "${var.project_id}-${random_id.random_suffix.hex}"
-  folder_id           = var.folder_id
-  billing_account     = var.billing_account_id
-  auto_create_network = false
+  project_id          = local.project_id
+  folder_id           = local.folder_id
+  org_id              = local.org_id
+  auto_create_network = var.auto_create_network
 }

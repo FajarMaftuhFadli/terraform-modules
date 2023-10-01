@@ -1,7 +1,3 @@
-resource "random_id" "random_suffix" {
-  byte_length = 3
-}
-
 resource "google_project" "project" {
   name                = var.project_name
   project_id          = "${var.project_id}-${random_id.random_suffix.hex}"

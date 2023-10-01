@@ -1,3 +1,3 @@
-output "organization_iam_binding" {
+output "organization_iam_bindings" {
   value = "No outputs"
 }

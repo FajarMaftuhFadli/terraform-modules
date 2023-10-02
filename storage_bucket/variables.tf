@@ -19,3 +19,8 @@ variable "uniform_bucket_level_access" {
 variable "project_id" {
   type = string
 }
+
+variable "use_random_suffix" {
+  type    = bool
+  default = false
+}

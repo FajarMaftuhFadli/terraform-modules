@@ -1,5 +1,5 @@
 resource "google_storage_bucket" "storage_bucket" {
-  name          = var.name
+  name          = local.name
   location      = var.location
   force_destroy = var.force_destroy
   project       = var.project_id

@@ -4,4 +4,5 @@ resource "google_project" "project" {
   folder_id           = local.folder_id
   org_id              = local.org_id
   auto_create_network = var.auto_create_network
+  billing_account     = local.billing_account_id
 }

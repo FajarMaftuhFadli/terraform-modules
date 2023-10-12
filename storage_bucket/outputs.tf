@@ -1,3 +1,3 @@
-output "storage_bucket" {
-  value = "No outputs"
+output "bucket_name" {
+  value = google_storage_bucket.storage_bucket.name
 }
